@@ -30,18 +30,19 @@ public class PageController{
 
             model.addAttribute("bgcolor", Room.list.get(doorNumber).getColor());
 
+
             if (Room.list.get(doorNumber).isLight()) {
                 model.addAttribute("enter", "off");
             } else {
                 model.addAttribute("enter", "on");
             }
 
-
             return "page2";
     }
 
     @PostMapping("/room")
-    public String pagePush(@RequestParam String enterLigth, Model model){
+    public String pagePush(@RequestParam String enterLigth,@RequestParam String door, Model model){
+        doorNumber=Integer.valueOf(door)-1;
         model.addAttribute("name",doorNumber+1);
 
         if (enterLigth.equals("on")) {
