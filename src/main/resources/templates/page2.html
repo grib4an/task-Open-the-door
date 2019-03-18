@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <title>page2</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+</head>
+<body th:bgcolor="${bgcolor}">
+
+    <div style="text-align: center;">
+        <form method="post">
+            <button name="enterLigth" type="submit" th:value="${enter}" th:text="${enter}"></button>
+        </form>
+
+        <p th:text="'Door, № ' + ${name} + '!'" />
+        <p><a href="/doors">Go home</a></p>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Doors</title>
+    <style>
+        select {
+            width: 300px; /* Ширина списка в пикселах */
+        }
+
+    </style>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <form action="/room">
+        <div style="text-align: center;">
+        <select name="door">
+                <option value="1">door with blue light</option>
+                <option value="2">door with green light</option>
+                <option value="3">door with red light</option>
+                <option value="4">door with yellow light</option>
+        </select>
+        <button>Push</button>
+        </div>
+    </form>
+
+</body>
+</html>
