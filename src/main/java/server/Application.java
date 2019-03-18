@@ -1,4 +1,4 @@
-package templater;
+package server;
 
 import Model.Room;
 import org.springframework.boot.SpringApplication;

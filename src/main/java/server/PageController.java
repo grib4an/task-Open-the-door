@@ -1,4 +1,4 @@
-package templater;
+package server;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -21,7 +21,7 @@ public class PageController{
     }
 
     @GetMapping("/room")
-    public String room(@RequestParam String door, Model model){
+    public String getRoom(@RequestParam String door, Model model){
             model.addAttribute("name", door);
             doorNumber = Integer.valueOf(door) - 1;
 
@@ -41,7 +41,7 @@ public class PageController{
     }
 
     @PostMapping("/room")
-    public String pagePush(@RequestParam String enterLigth,@RequestParam String door, Model model){
+    public String postRoom(@RequestParam String enterLigth,@RequestParam String door, Model model){
         doorNumber=Integer.valueOf(door)-1;
         model.addAttribute("name",doorNumber+1);
 
